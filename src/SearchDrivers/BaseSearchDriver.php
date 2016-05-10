@@ -58,7 +58,9 @@ abstract class BaseSearchDriver implements SearchDriverInterface
      */
     public function select()
     {
-        $this->columns = func_get_args();
+        $args = func_get_args();
+
+        $this->columns = is_array( $args[0] ) ? $args[0] : $args;
 
         return $this;
     }
