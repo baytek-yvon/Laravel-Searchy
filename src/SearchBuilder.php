@@ -30,7 +30,7 @@ class SearchBuilder
      */
     private $config;
 
-    public function __construct(Repository $config)
+    public function __construct($config)
     {
         $this->config = $config;
     }
